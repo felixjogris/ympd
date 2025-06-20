@@ -28,6 +28,9 @@
 #include "config.h"
 #include "json_encode.h"
 
+struct t_mpd mpd;
+char dirble_api_token[28];
+
 /* forward declaration */
 static int mpd_notify_callback(struct mg_connection *c, enum mg_event ev);
 
