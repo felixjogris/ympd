@@ -680,6 +680,10 @@ int mpd_put_browse(char *buffer, char *path, unsigned int offset)
                 cur += json_emit_int(cur, end - cur, mpd_song_get_duration(song));
                 cur += json_emit_raw_str(cur, end - cur, ",\"title\":");
                 cur += json_emit_quoted_str(cur, end - cur, mpd_get_title(song));
+                cur += json_emit_raw_str(cur, end - cur, ",\"artist\":");
+                cur += json_emit_quoted_str(cur, end - cur, mpd_get_artist(song));
+                cur += json_emit_raw_str(cur, end - cur, ",\"album\":");
+                cur += json_emit_quoted_str(cur, end - cur, mpd_get_album(song));
                 cur += json_emit_raw_str(cur, end - cur, "},");
                 break;
 
