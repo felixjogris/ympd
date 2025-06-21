@@ -540,6 +540,8 @@ function webSocketConnect() {
                     if(obj.data.album) {
                         $('#album').text(obj.data.album);
                         notification += obj.data.album + "<br />";
+                    } else {
+                        $('#album').html("&nbsp;");
                     }
                     if(obj.data.artist) {
                         $('#artist').text(obj.data.artist);
